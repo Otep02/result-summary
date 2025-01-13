@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+:root{
+
+    /* ### Primary */
+    --Lightred: hsl(0, 100%, 67%);
+    --Orangeyyellow: hsl(39, 100%, 56%);
+    --Greenteal: hsl(166, 100%, 37%);
+    --Cobaltblue: hsl(234, 85%, 45%);
+
+    /* ## Gradients */
+
+    --Lightslateblue: hsl(252, 100%, 67%);
+    --Lightroyalblue: hsl(241, 81%, 54%);
+    --Violetblue : hsla(256, 72%, 46%, 1);
+    --Persianblue : hsla(241, 72%, 46%, 0);
+
+    /* ### Neutral */
+
+    --White: hsl(0, 0%, 100%);
+    --Paleblue: hsl(221, 100%, 96%);
+    --Lightlavender: hsl(241, 100%, 89%);
+    --Darkgrayblue: hsl(224, 30%, 27%);
+
+}
+
+/* General Properties */
+
+body{
+    font-family: 'Hanken Grotesk',sans-serif;
+    font-size: 1.8rem;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    width: 60rem;
+    height: 40rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    border-radius: 2rem;
+    box-shadow: 10px 10px 24px -4px hsla(252, 100%, 67%, 0.527);
+}
+
+
+.col{
+    border-radius: 2rem;
+}
+
+
+/* Col-1 properties RESULT */
+
+.col-1{
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    color: var(--Lightlavender);
+    text-align: center;
+    padding: 2rem 5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.col-1 h3{
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.col-1 p{
+    font-size: 1.3rem;
+}
+
+.col-1 .sub-tittle{
+    color:var(--White) ;
+    font-weight: 700;
+}
+
+.col-1 .score{
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+    border-radius: 50%;
+    width: 13rem;
+    height: 13rem;
+    place-content: center;
+    margin: 2rem 0;
+}
+
+.col-1 .score .result-score{
+    font-size: 5rem;
+    font-weight: 800;
+    color: var(--White);
+}
+
+.col-1 .score .result-total{
+    color: hsla(241, 100%, 89%, 0.61);
+}
+
+/* Col-2 properteis Summary */
+
+.col-2{
+    padding: 2rem;
+    color: var(--Darkgrayblue);
+}
+
+.col-2 p{
+    font-weight: 700;
+    color: var(--Lightlavender);
+}
+
+.col-2 p b{
+    color: var(--Darkgrayblue);
+}
+
+.col-2 .summary-score{
+    margin: 2rem 0;
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.col-2 .summary-score .row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.col-2 .summary-score .row .icon{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.summary-score .row:nth-child(1){
+    background-color: hsla(0, 100%, 67%, 0.096);
+}
+
+.summary-score :nth-child(1) .icon > b {
+    color: var(--Lightred);
+}
+
+.summary-score .row:nth-child(2){
+    background-color: hsl(39, 100%, 56%, 0.096);
+}
+
+.summary-score :nth-child(2) .icon > b {
+    color: var(--Orangeyyellow);
+}
+
+.summary-score .row:nth-child(3){
+    background-color: hsl(166, 100%, 37%, 0.096);
+}
+
+.summary-score :nth-child(3) .icon > b {
+    color: var(--Greenteal);
+}
+
+.summary-score .row:nth-child(4){
+    background-color: hsl(234, 85%, 45%, 0.096);
+}
+
+.summary-score :nth-child(4) .icon > b {
+    color: var(--Cobaltblue);
+}
+
+button{
+    cursor: pointer;
+    margin-top: 1.5rem;
+    width: 25rem;
+    border-radius: 4rem;
+    border: none;
+    background-color: var(--Darkgrayblue);
+    color: var(--White);
+    padding: 1.5rem 3rem;
+    transition: 0.3s ease;
+}
+
+button:hover{
+    background-color: var(--Lightslateblue);
+}
+
+
+@media(max-width:420px){
+    main{
+        grid-template-columns: 1fr;
+        grid-template-rows: .25fr 1fr;
+        height: auto;
+        width: 100%;
+    }
+
+    .col-1{
+        border-radius: 0 0 2rem 2rem;
+    }
+
+    .col-2{
+        padding: 2rem 3rem;
+    }
+}
