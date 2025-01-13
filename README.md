@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: 
-- Live Site URL: 
+- Solution URL: https://www.frontendmentor.io/solutions/result-summary-FDO7VBo4Oy
+- Live Site URL: https://otep02.github.io/result-summary/
 
 ## My process
 
